@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Animation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.video-container {
+  position: relative;
+  width: 90%;
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto; /* Centers the video */
+  border: 5px solid pink; /* Black border */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensures the video doesn't overflow the container */
+}
+
+#flowerVideo {
+  width: 100%;
+  height: 80%;
+  display: block;
+}
+.navigate-button {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #ff4081; /* Green background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .navigate-button:hover {
+            background-color: #e73370; /* Darker green on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video id="flowerVideo" autoplay loop muted>
+            <source src="Vid1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <a href="countdown.html" class="navigate-button">💗💗💗</a>
+    </div>
+ 
+<script>
+     // Fade-in effect when the page loads
+     window.onload = function () {
+            document.body.style.opacity = "1"; // Fade in after loading
+        };
+
+        // Apply fade-out effect before navigating
+        document.getElementById("navigate-button").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.body.style.opacity = "0"; // Fade out
+            setTimeout(() => {
+                window.location.href = "countdown.html";
+            }, 1500); // Match transition time
+        });
+
+</script>
+   
+
+</body>
+</html>
