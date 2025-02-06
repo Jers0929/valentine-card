@@ -38,26 +38,28 @@
         }
 
         .gallery-image {
-            width: 80%;
-            height: auto;
+            width: 87%;
+            height: 93%;
             border: 3px solid red;
             transition: transform 0.3s ease, opacity 0.5s ease; /* Smooth Transition */
             margin: 0 auto;
             opacity: 0;
+            justify-content: center;
+
         }
 
         .gallery-image:hover {
             transform: scale(0.95);
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 400px) {
             .gallery-item {
                 flex: 1 1 calc(50%);
                 max-width: calc(50%);
             }
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 400px) {
             .gallery-item {
                 flex: 1 1 100%;
                 max-width: 100%;
