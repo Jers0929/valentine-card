@@ -16,7 +16,7 @@
             height: 100vh;
             margin: 0;
             opacity: 0; /* Initially hidden */
-            transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out */
+            transition: opacity 1.5s ease-in-out; /* Smooth fade-in and fade-out */
         }
 
         .container {
@@ -90,6 +90,15 @@
         .pin-pad button:nth-child(10):active {
             background: linear-gradient(to bottom, #aaa, #888);
         }
+        .pin-pad button:nth-child(12) {
+            background: linear-gradient(to bottom, #ddd, #bbb);
+            color: black;
+        }
+
+        .pin-pad button:nth-child(12):active {
+            background: linear-gradient(to bottom, #aaa, #888);
+        }
+   
     </style>
 </head>
 <body>
@@ -109,6 +118,7 @@
             <button onclick="addDigit(9)">9</button>
             <button onclick="clearPin()">X</button>
             <button onclick="addDigit(0)">0</button>
+            <button id="checkButton" onclick="checkPIN">✓</button>
         </div>
     </div>
 
