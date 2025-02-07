@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Our Memories</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffe6e6;
+        }
+        .video-container {
+            position: relative;
+            width: 90%;
+            max-width:500px;
+            margin: 0 auto;
+            border: 5px solid rgb(255, 0, 43);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .video {
+            width: 300px;
+            height: 535px;
+        }
+        #muteButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .navigate-button {
+            display: block;
+            width: 80px;
+            margin: 2px auto;
+            padding: 2px;
+            text-align: center;
+            background-color: #ff4081; /* Green background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .navigate-button:hover {
+            background-color: #e73370; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div style="position: relative; width: 100%; max-width: 600px; margin: auto;" class="video-container">
+        <video id="video" autoplay loop muted playsinline class="video">
+            <source src="Vid2.mp4" type="video/mp4">
+            <source src="Vid2.mp4" type="video/webm">
+            <source src="Vid2.mp4" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        <a href="letter.html" class="navigate-button">💗💗💗</a>
+        <button id="muteButton" onclick="toggleMute()">
+            <i id="muteIcon" class="fa-solid fa-volume-xmark"></i>
+        </button>
+
+    </div>
+    <script>
+       const video = document.getElementById('video');
+        const muteButton = document.getElementById('muteButton');
+        const muteIcon = document.getElementById('muteIcon');
+
+        function toggleMute() {
+            video.muted = !video.muted;
+            muteIcon.classList.toggle('fa-volume-xmark', video.muted);
+            muteIcon.classList.toggle('fa-volume-high', !video.muted);
+        }
+    </script>
+</body>
+</html>
