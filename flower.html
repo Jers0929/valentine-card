@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #ffe6e6;
 }
 
 .video-container {
@@ -34,16 +34,16 @@
 .navigate-button {
             display: block;
             width: 100px;
-            margin: 20px auto;
-            padding: 10px;
+            margin: 5px auto;
+            padding: 5px;
             text-align: center;
             background-color: #ff4081; /* Green background */
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 3px;
             cursor: pointer;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 14px;
         }
 
         .navigate-button:hover {
@@ -60,7 +60,9 @@
     <div class="video-container">
         <video id="flowerVideo" autoplay loop muted>
             <source src="Vid1.mp4" type="video/mp4">
-
+            <source src="Vid1.mp4" type="video/webm">
+            <source src="Vid1.mp4" type="video/ogg">
+            Your browser does not support the video tag.
         </video>
         <h3>Happy Valentines, Love 💖</h3>
         <a href="countdown.html" class="navigate-button">💗💗💗</a>
