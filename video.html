@@ -84,6 +84,20 @@
             muteIcon.classList.toggle('fa-volume-xmark', video.muted);
             muteIcon.classList.toggle('fa-volume-high', !video.muted);
         }
+
+          // Fade-in effect on page load
+          window.onload = function() {
+            document.body.style.opacity = "1";
+        };
+
+        // Smooth transition when clicking the back button
+        document.getElementById("backButton").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.body.style.opacity = "0";
+            setTimeout(function() {
+                window.location.href = "letter.html"; // Redirect after fade-out
+            }, 1000); // Delay to match fade-out transition
+        });
     </script>
 </body>
 </html>
